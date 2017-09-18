@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javaScript DOM 节点," />
 
 
 
@@ -69,16 +69,18 @@
 
 
 
-<meta name="description" content="脑中有栈 心中有码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="清水流年">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="元素节点1.元素节点规定元素节点具有以下特点：    1、nodeType 值为1    2、nodeName 值为元素的标签名（还一个别名tagName）    3、nodeValue 值为null    4、parentNode 一般是Element,也可能是Document    5、其子节点可能是 Element、Text、Conment等代码示例：">
+<meta name="keywords" content="javaScript DOM 节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="元素节点，属性节点，文本节点及其类型判断和查找">
+<meta property="og:url" content="http://yoursite.com/2017/09/18/DOM节点02/index.html">
 <meta property="og:site_name" content="清水流年">
-<meta property="og:description" content="脑中有栈 心中有码">
+<meta property="og:description" content="元素节点1.元素节点规定元素节点具有以下特点：    1、nodeType 值为1    2、nodeName 值为元素的标签名（还一个别名tagName）    3、nodeValue 值为null    4、parentNode 一般是Element,也可能是Document    5、其子节点可能是 Element、Text、Conment等代码示例：">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-18T15:46:37.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="清水流年">
-<meta name="twitter:description" content="脑中有栈 心中有码">
+<meta name="twitter:title" content="元素节点，属性节点，文本节点及其类型判断和查找">
+<meta name="twitter:description" content="元素节点1.元素节点规定元素节点具有以下特点：    1、nodeType 值为1    2、nodeName 值为元素的标签名（还一个别名tagName）    3、nodeValue 值为null    4、parentNode 一般是Element,也可能是Document    5、其子节点可能是 Element、Text、Conment等代码示例：">
 
 
 
@@ -108,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/18/DOM节点02/"/>
 
 
 
 
 
-  <title>清水流年</title>
+  <title>元素节点，属性节点，文本节点及其类型判断和查找 | 清水流年</title>
   
 
 
@@ -133,8 +135,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,9 +272,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -303,9 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/18/DOM节点02/" itemprop="url">元素节点，属性节点，文本节点及其类型判断和查找</a></h1>
+          <h1 class="post-title" itemprop="name headline">元素节点，属性节点，文本节点及其类型判断和查找</h1>
         
 
         <div class="post-meta">
@@ -388,16 +387,27 @@
       
 
       
-        
-          <h2 id="元素节点"><a href="#元素节点" class="headerlink" title="元素节点"></a>元素节点</h2><p>1.元素节点<br>规定元素节点具有以下特点：<br>    1、nodeType 值为1<br>    2、nodeName 值为元素的标签名（还一个别名tagName）<br>    3、nodeValue 值为null<br>    4、parentNode 一般是Element,也可能是Document<br>    5、其子节点可能是 Element、Text、Conment等<br>代码示例：<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/18/DOM节点02/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h2 id="元素节点"><a href="#元素节点" class="headerlink" title="元素节点"></a>元素节点</h2><p>1.元素节点<br>规定元素节点具有以下特点：<br>    1、nodeType 值为1<br>    2、nodeName 值为元素的标签名（还一个别名tagName）<br>    3、nodeValue 值为null<br>    4、parentNode 一般是Element,也可能是Document<br>    5、其子节点可能是 Element、Text、Conment等<br>代码示例：<br><a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var div1 = document.getElementById(<span class="string">"div1"</span>);</div><div class="line"><span class="built_in">echo</span>(div1.nodeName);	//输出：DIV，用途判断节点的名称</div><div class="line"><span class="built_in">echo</span>(div1.nodeType);	//输出：1，用途判断节点的类型</div><div class="line"><span class="built_in">echo</span>(div1.nodeValue);	//输出：null，用途获取节点值</div><div class="line"><span class="built_in">echo</span>(div1.parentNode);	//输出：[object HTMLPreElement]，用途获取父节点</div><div class="line"><span class="built_in">echo</span>(div1.parentNode.nodeName); //输出：PRE	，用途获取父节点名称</div><div class="line"><span class="built_in">echo</span>(div1.childNodes);	//[object NodeList]	，用途获取子节点</div><div class="line"><span class="built_in">echo</span>(div1.childNodes.length);	//输出：2，查看本节点下面子节点的个数</div><div class="line"><span class="built_in">echo</span>(div1.childNodes.item(1).nodeValue);	//输出：第二节点</div></pre></td></tr></table></figure></p>
+<h2 id="属性节点"><a href="#属性节点" class="headerlink" title="属性节点"></a>属性节点</h2><p>属性节点常用方法与通用属性<br>HTML每个元素都包含下列常用属性<br>    1、id：元素在文档中的唯一标识符<br>    2、title：元素细节的附加说明信息，一般鼠标放上去时候以提示形式显示。<br>    3、className：与CSS特性对应。<br>除了以上通用属性外，部分元素还有自己特有的属性。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var aid = document.getElementById(<span class="string">"aid"</span>);// //获取属性信息：getAttribute</div><div class="line"><span class="built_in">echo</span>(aid.getAttribute(<span class="string">"href"</span>));			//输出：phpdl.com</div><div class="line"><span class="built_in">echo</span>(aid.getAttribute(<span class="string">"title"</span>));	//超级链接Title	</div><div class="line">//设置属性信息：setAttribute()</div><div class="line">aid.setAttribute(<span class="string">"title"</span>,<span class="string">"我是动态TITLE"</span>);	//添加属性节点</div><div class="line">//删除属性信息：removeAttribute()</div><div class="line">aid.removeAttribute(<span class="string">"href"</span>);</div><div class="line"></div><div class="line">//批量使用属性信息</div><div class="line"><span class="built_in">echo</span>(aid.attributes.length);	//返回一个元素的属性个数</div></pre></td></tr></table></figure></p>
+<h2 id="获取元素的常用属性"><a href="#获取元素的常用属性" class="headerlink" title="获取元素的常用属性"></a>获取元素的常用属性</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var objH = document.getElementById(<span class="string">"objh"</span>);</div><div class="line"><span class="built_in">echo</span>(objH.id);	//输出：objh</div><div class="line"><span class="built_in">echo</span>(objH.nodeName);	//输出：h1</div><div class="line"><span class="built_in">echo</span>(objH.className);	//输出：bordercls</div><div class="line"><span class="built_in">echo</span>(objH.align);	//输出：center</div><div class="line">objH.className = <span class="string">"bordercls bgcls"</span>;	//设置元素的CSS样式</div></pre></td></tr></table></figure>
+<p>说明：元素对象.属性 可以快速访问和设置，是最常用的形式，但不是所有的都能通过这种方法得到我们想要的结果<br>    例如：aid.href不一定能获取超连接href的值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var obj1 = document.getElementById(<span class="string">"Dh1"</span>);</div><div class="line">var obj2 = document.getElementById(<span class="string">"Dh2"</span>);</div><div class="line">alert(obj1.innerText + obj2.textContent);</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">/封装写函数</div><div class="line"><span class="keyword">function</span> <span class="built_in">echo</span>(  str, flag )&#123;</div><div class="line"> 	<span class="keyword">if</span>(arguments[1]==1)&#123;</div><div class="line">		document.write(arguments[0]);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		document.writeln(arguments[0]);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125; 	</div><div class="line">```	</div><div class="line"><span class="comment">## 文本节点</span></div><div class="line">文本节点由Text类型表示，包含的是可以按照字面解释的纯文本内容。</div><div class="line">	可以是转义后的HTML字符，但是不能包含HTML代码。</div><div class="line">	文本节点有以下特征：</div><div class="line">	1. nodeType 值为3</div><div class="line">	2. nodeName 值为 “<span class="comment">#text”   </span></div><div class="line">	3. nodeValue 值为节点所包含的文本(别名：data属性)</div><div class="line">	4. parentNode 是一个Element</div><div class="line">	5. 不能包含子节点，文本节点是最小单元。</div><div class="line">	虽然文本节点不能包含子节点，却提供了很多操控文本节点的方法和属性，常用的如下。</div><div class="line">	1. appendData(text)			//在文本末尾追加text内容</div><div class="line">	2. deleteData(offset,cont)	//从offset位置开始删除，删除count个</div><div class="line">	3. insertData(offset,text)  //在offset指定的位置插入text内容</div><div class="line">	4. replaceData(offset,count,text) //用text替换从offset开始到(offset+count)为止处的文本</div><div class="line">	5. splitText(offset) //从offset指定的位置将当前文本节点分成两个文本节点</div><div class="line">	6. substringData(offset,count) //提取从从offset开始到(offset+count)为止处的文本</div><div class="line">	文本节点的属性：length</div><div class="line">	nodeValue.length或data.length中保存着文本节点中字符的数目。</div><div class="line">	注意事项：默认情况下每个可以包含内容的元素最多只能有一个文本节点，而且必须确实有内容存在。</div><div class="line">``` bash</div><div class="line"><span class="built_in">echo</span>(<span class="string">"----------文本节点操控方法的应用------------"</span>);</div><div class="line">var  obj = document.getElementById(<span class="string">"div1"</span>);</div><div class="line">var  obj2 = document.getElementById(<span class="string">"div2"</span>);</div><div class="line"></div><div class="line">var objh1 = document.getElementById(<span class="string">"objh1"</span>);</div><div class="line">//追加新内容</div><div class="line">obj.childNodes[0].appendData(<span class="string">"中华人民共和国"</span>);</div><div class="line"></div><div class="line">//删除指定内容</div><div class="line">obj.childNodes[0].deleteData(4,2);</div><div class="line"></div><div class="line">//在指定位置插入指定内容</div><div class="line">obj.childNodes[0].insertData(4,<span class="string">"，insertData"</span>);</div><div class="line"></div><div class="line">//替换指定文本</div><div class="line">obj2.childNodes[0].replaceData(10,5,<span class="string">"美国的"</span>) ;</div><div class="line"></div><div class="line">//获取文本节点长度</div><div class="line">document.writeln(obj2.childNodes[0].nodeValue.length);</div><div class="line"></div><div class="line">//获取子节点长度 </div><div class="line"><span class="built_in">echo</span>(<span class="string">"---------获取子节点个数------------"</span>);</div><div class="line">document.writeln(obj2.childNodes.length);  //输出：1</div><div class="line"></div><div class="line">//分割文本节点</div><div class="line">obj2.childNodes[0].splitText(10) ;</div><div class="line">document.writeln(obj2.childNodes.length);  //输出：2</div></pre></td></tr></table></figure>
+<h2 id="判断节点类型"><a href="#判断节点类型" class="headerlink" title="判断节点类型"></a>判断节点类型</h2><p>经常我们需要的是知道一个对象是元素、是属性、还是文本，下一节节点查找我们将看的他的用途。<br>    元素节点的 nodeType值为1<br>    属性节点的nodeType值为2<br>    文本节点的nodeType值为3<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var ul = document.getElementById(<span class="string">"ul1"</span>);</div><div class="line"><span class="built_in">echo</span>(ul.nodeType);		//输出 1，说明是元素节点</div><div class="line"><span class="built_in">echo</span>(ul.childNodes[0].nodeType);	//输出 3，说明是文本节点，空白也算</div><div class="line"><span class="built_in">echo</span>(ul.childNodes[1].nodeType);	//输出 1，说明是元素节点就是第一个li</div></pre></td></tr></table></figure></p>
+<h2 id="节点的查找"><a href="#节点的查找" class="headerlink" title="节点的查找"></a>节点的查找</h2><p>知识点一：父子关系查找<br>    1、hasChildNodes()方法，判断一个对象是否包含子节点。<br>        语法格式：element.hasChildNodes()<br>        返回值：如果对象包含子节点则返回true,如果对象不包含子节点返回false.</p>
+<pre><code>2、childNodes 对象，返回一个元素子节点的集合。
+
+3、parentNode属性返回指定节点的父节点。
+    语法格式：element.parentNode
+
+4、firstChild 指向childNodes中的第一个节点    
+    语法格式：element.firstChild
+
+5、lastChild 指向childNodes列表中的最后一个节点        
+    语法格式：element.lastChild
+</code></pre><p>单词必背：<br>    parent：父亲<br>    child：孩子<br>    node：节点<br>    first：第一<br>    last：最后一个<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">var oUl = document.getElementById(<span class="string">"oUl"</span>);</div><div class="line"><span class="keyword">if</span>(oUl.hasChildNodes())&#123;</div><div class="line">	oUlChild = oUl.childNodes;</div><div class="line">	<span class="keyword">for</span>(var i=0;i&lt;oUlChild.length;i++)&#123;</div><div class="line">		<span class="built_in">echo</span>(oUlChild[i].nodeName);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">echo</span>(<span class="string">"----------------只获取元素节点-------------"</span>);</div><div class="line">var oUl = document.getElementById(<span class="string">"oUl"</span>);</div><div class="line"><span class="keyword">if</span>(oUl.hasChildNodes())&#123;</div><div class="line">	oUlChild = oUl.childNodes;</div><div class="line">	<span class="keyword">for</span>(var i=0;i&lt;oUlChild.length;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(oUlChild[i].nodeType==3) <span class="built_in">continue</span>;</div><div class="line">		<span class="built_in">echo</span>(oUlChild[i].nodeName);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="built_in">echo</span>(<span class="string">"----------------批量修改元素节点的样式-------------"</span>);</div><div class="line">var oUl = document.getElementById(<span class="string">"oUl"</span>);</div><div class="line"><span class="keyword">if</span>(oUl.hasChildNodes())&#123;</div><div class="line">	oUlChild = oUl.childNodes;</div><div class="line">	<span class="keyword">for</span>(var i=0;i&lt;oUlChild.length;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(oUlChild[i].nodeType==3) <span class="built_in">continue</span>;</div><div class="line">		oUlChild[i].style.border = <span class="string">"#ff0000 solid 5px"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">echo</span>(<span class="string">"----------------parentNode获取父节点-------------"</span>);</div><div class="line">var oLi = document.getElementById(<span class="string">"oLi"</span>);</div><div class="line"><span class="built_in">echo</span>(oLi.parentNode.tagName);	//输出：UL</div><div class="line"><span class="built_in">echo</span>(oLi.parentNode.hasChildNodes());	//输出：<span class="literal">true</span></div><div class="line"><span class="built_in">echo</span>(oLi.parentNode.childNodes.length);		//输出：7</div><div class="line"></div><div class="line">/*提示：parentNode属性可以反复使用，我们可以通过一个元素，找到其父亲，其爷爷(如果有的话)</div><div class="line">	element.parentNode.parentNode 等等*/</div></pre></td></tr></table></figure></p>
+<p>知识点二：兄弟关系查找<br>    1、nextSibling<br>    2、previousSibling<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">echo</span>(<span class="string">"--------兄弟关系查找--------------"</span>);</div><div class="line">var oH2 = document.getElementById(<span class="string">"oH2"</span>);</div><div class="line">var next  = oH2.nextSibling.nodeType==1?oH2.nextSibling:null;</div><div class="line"><span class="built_in">echo</span>(next)  ;	//输出null,</div><div class="line">说明：在IE老版浏览器输出下一个元素，因为对空白文本节点解释不同，现在浏览器认为空白属于文本节点。</div><div class="line">	为了解决这个问题。一般我们把nexSibling与previousSibling重新封装</div><div class="line">//封装后的nextSib</div><div class="line"><span class="keyword">function</span> nextSib(node)&#123;</div><div class="line">	var t = node.parentNode.lastChild;</div><div class="line">	<span class="keyword">if</span>(node == t)&#123;<span class="built_in">return</span> null;&#125; //如果是最后一个直接结束函数</div><div class="line">	var t2 = node.nextSibling;	//获取下一个兄弟</div><div class="line">	//如果下一个兄弟不是元素型的，并且下下一个还有元素</div><div class="line">	<span class="keyword">while</span>(t2.nodeType != 1&amp;&amp;t2.nextSibling != null)&#123;</div><div class="line">		t2 = t2.nextSibling;</div><div class="line">		<span class="built_in">return</span> (t2.nodeType==1?t2 : null);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var next = nextSib(oH2);</div><div class="line"><span class="built_in">echo</span>(next);		//[object HTMLPhraseElement]</div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -412,171 +422,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/DOM节点01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="PAN AN">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="清水流年">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/18/DOM节点01/" itemprop="url">DOM模型概念和JavaScript访问和查找节点</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T14:17:40+08:00">
-                2017-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">javaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/javaScript-DOM-节点/" rel="tag"># javaScript DOM 节点</a>
           
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/18/DOM节点01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/18/DOM节点01/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>1：DOM概念<br>    Document,Object,Model文档对象模型，DOM模型给我们动态控制HTML提供了无限自由。<br>    用途：例如不同时间显示不同网页，动态添加、修改，删除HTML元素等。<br>2、节点的概念<br>    一个DOM文档是有很多个小的单元组成的一个大集合，这些小单元我们称为节点。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/18/DOM节点01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/18/DOM节点01/" rel="next" title="DOM模型概念和JavaScript访问和查找节点">
+                <i class="fa fa-chevron-left"></i> DOM模型概念和JavaScript访问和查找节点
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -586,10 +461,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -597,6 +473,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -617,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -697,6 +593,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#元素节点"><span class="nav-number">1.</span> <span class="nav-text">元素节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性节点"><span class="nav-number">2.</span> <span class="nav-text">属性节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取元素的常用属性"><span class="nav-number">3.</span> <span class="nav-text">获取元素的常用属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断节点类型"><span class="nav-number">4.</span> <span class="nav-text">判断节点类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点的查找"><span class="nav-number">5.</span> <span class="nav-text">节点的查找</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -835,6 +747,18 @@
       <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/09/18/DOM节点02/';
+          this.page.identifier = '2017/09/18/DOM节点02/';
+          this.page.title = '元素节点，属性节点，文本节点及其类型判断和查找';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

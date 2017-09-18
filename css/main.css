@@ -1737,7 +1737,7 @@ pre .javascript .function {
   padding: 2px;
   max-width: 120px;
   height: auto;
-  border: 1px solid #eee;
+  border: 0px solid #eee;
   border-radius: 50%;
 }
 .site-author-name {
@@ -1820,7 +1820,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9eff99;
+  background: #aa0bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2806,7 +2806,7 @@ pre .javascript .function {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: rgba(255,255,255,.5);
+  background: #f9f9f9;
   border-bottom-color: #fff;
 }
 .menu .menu-item br {
@@ -2980,4 +2980,32 @@ pre .javascript .function {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("/images/homeback.png");
+}
+.content-wrap {
+  background: rgba(255,255,255,0.3);
+}
+.header-inner {
+  background: rgba(255,255,255,0.3);
+}
+.sidebar,
+.sidebar-inner {
+  background: rgba(255,255,255,0.3);
+}
+.menu .menu-item a:hover,
+.menu-item-active a {
+  background: rgba(255,255,255,0.5);
+  border-bottom-color: #fff;
+}
+.post-button {
+  margin-top: 30px;
+  background: transparent;
+}
+.post-button .btn {
+  background: transparent;
+}
+.posts-expand .post-meta {
+  margin-bottom: 30px;
 }

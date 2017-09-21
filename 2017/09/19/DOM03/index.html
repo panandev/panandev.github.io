@@ -69,18 +69,18 @@
 
 
 
-<meta name="description" content="1：DOM概念    Document,Object,Model文档对象模型，DOM模型给我们动态控制HTML提供了无限自由。    用途：例如不同时间显示不同网页，动态添加、修改，删除HTML元素等。2、节点的概念    一个DOM文档是有很多个小的单元组成的一个大集合，这些小单元我们称为节点。">
+<meta name="description" content="节点的创建与添加 createElement() 创建元素节点用此方法语法格式：document.createElement(&amp;quot;tagName&amp;quot;);例如：document.createElement(&amp;quot;div&amp;quot;); 这样就创建了一个div元素，注意不需要写结尾和尖括号。 createTextNode()，创建文本节点。 语法格式：createTextNode">
 <meta name="keywords" content="javaScript DOM 节点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOM模型概念和JavaScript访问和查找节点">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/DOM节点01/index.html">
+<meta property="og:title" content="元素节点的创建，添加，替换与删除。">
+<meta property="og:url" content="http://yoursite.com/2017/09/19/DOM03/index.html">
 <meta property="og:site_name" content="清水流年">
-<meta property="og:description" content="1：DOM概念    Document,Object,Model文档对象模型，DOM模型给我们动态控制HTML提供了无限自由。    用途：例如不同时间显示不同网页，动态添加、修改，删除HTML元素等。2、节点的概念    一个DOM文档是有很多个小的单元组成的一个大集合，这些小单元我们称为节点。">
+<meta property="og:description" content="节点的创建与添加 createElement() 创建元素节点用此方法语法格式：document.createElement(&amp;quot;tagName&amp;quot;);例如：document.createElement(&amp;quot;div&amp;quot;); 这样就创建了一个div元素，注意不需要写结尾和尖括号。 createTextNode()，创建文本节点。 语法格式：createTextNode">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-18T15:18:26.378Z">
+<meta property="og:updated_time" content="2017-09-19T15:07:50.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOM模型概念和JavaScript访问和查找节点">
-<meta name="twitter:description" content="1：DOM概念    Document,Object,Model文档对象模型，DOM模型给我们动态控制HTML提供了无限自由。    用途：例如不同时间显示不同网页，动态添加、修改，删除HTML元素等。2、节点的概念    一个DOM文档是有很多个小的单元组成的一个大集合，这些小单元我们称为节点。">
+<meta name="twitter:title" content="元素节点的创建，添加，替换与删除。">
+<meta name="twitter:description" content="节点的创建与添加 createElement() 创建元素节点用此方法语法格式：document.createElement(&amp;quot;tagName&amp;quot;);例如：document.createElement(&amp;quot;div&amp;quot;); 这样就创建了一个div元素，注意不需要写结尾和尖括号。 createTextNode()，创建文本节点。 语法格式：createTextNode">
 
 
 
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/18/DOM节点01/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/19/DOM03/"/>
 
 
 
 
 
-  <title>DOM模型概念和JavaScript访问和查找节点 | 清水流年</title>
+  <title>元素节点的创建，添加，替换与删除。 | 清水流年</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/DOM节点01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/DOM03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PAN AN">
@@ -304,7 +304,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">DOM模型概念和JavaScript访问和查找节点</h1>
+          <h1 class="post-title" itemprop="name headline">元素节点的创建，添加，替换与删除。</h1>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T14:17:40+08:00">
-                2017-09-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T22:49:02+08:00">
+                2017-09-19
               </time>
             
 
@@ -357,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/09/18/DOM节点01/#comments" itemprop="discussionUrl">
+                <a href="/2017/09/19/DOM03/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/18/DOM节点01/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/09/19/DOM03/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,21 +387,18 @@
       
 
       
-        <p>1：DOM概念<br>    Document,Object,Model文档对象模型，DOM模型给我们动态控制HTML提供了无限自由。<br>    用途：例如不同时间显示不同网页，动态添加、修改，删除HTML元素等。<br>2、节点的概念<br>    一个DOM文档是有很多个小的单元组成的一个大集合，这些小单元我们称为节点。<br><a id="more"></a></p>
-<h2 id="节点类型"><a href="#节点类型" class="headerlink" title="节点类型"></a>节点类型</h2><p>3、节点类型<br>    DOM中把节点分为十二种类型常用的有以下几种类型。<br>    3.1、元素节点<br>    3.2、属性节点<br>    3.3、文本节点<br>    3.9、document<br>    3.11、文档片段(fragment)<br>例如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;a href=<span class="string">"http://www.baidu.com"</span> title=<span class="string">"百度网站"</span>&gt;连接百度网站&lt;/a&gt;</div></pre></td></tr></table></figure></p>
-<p>那么: a标签就是元素节点<br>      href及title就是属性节点<br>      中间的文本[连接百度网站]，就是文本节点。</p>
-<h3 id="访问节点"><a href="#访问节点" class="headerlink" title="访问节点"></a>访问节点</h3><p>4：访问节点<br>    认识节点后，如何控制他们就是dom模型章节的重点，DOM中常用的访问节点的两个方法。<br>    1、getElementById()<br>    2、getElementsByTagName()<br>    getElementById(ID)返回指定ID的元素对象，标准的HTML中要求ID必须唯一。<br>    代码示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var obj1 = document.getElementById(<span class="string">"Dh1"</span>);</div><div class="line">var obj2 = document.getElementById(<span class="string">"Dh2"</span>);</div><div class="line">alert(obj1.innerText + obj2.textContent);</div></pre></td></tr></table></figure></p>
-<p>IE老版本只认： innerText，火狐只认：textContent， 新版本都认：textContent<br>注意：ID号请不要和其他元素的name重名，在IE老浏览器中可能会产生错误。<br>    3.getElementsByTagName(TagName);<br>    功能：获取相同元素名的对象列表到数组中。<br>    代码示例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var hlist = document.getElementsByTagName(<span class="string">"h1"</span>);</div><div class="line">alert(obj1.innerText + obj2.textContent);</div></pre></td></tr></table></figure></p>
-<p>用途举例：动态批量修改样式</p>
-<pre><code class="bash"><span class="keyword">for</span>(p <span class="keyword">in</span> hlist){
-    hlist[p].style.color=<span class="string">"#ff0000"</span>;
-    hlist[p].style.border=<span class="string">"5px #ff0000 solid"</span>;
-    hlist[p].style.width = <span class="string">"300px"</span>;
-    hlist[p].style.borderRadius = <span class="string">"30px"</span>;
-}
-</code></pre>
-<p>注意：很多JS代码需要HTML文档加载完毕后才能正确获取对应元素，所以一般都把JS放到最后,或用onload事件判断页面是否加载完毕。</p>
-
+        <h2 id="节点的创建与添加"><a href="#节点的创建与添加" class="headerlink" title="节点的创建与添加"></a>节点的创建与添加</h2><ol>
+<li><code>createElement()</code> 创建元素节点用此方法<br>语法格式：<code>document.createElement(&quot;tagName&quot;)</code>;<br>例如：<code>document.createElement(&quot;div&quot;)</code>; 这样就创建了一个div元素，注意不需要写结尾和尖括号。</li>
+<li><code>createTextNode()</code>，创建文本节点。<br> 语法格式：<code>createTextNode(&quot;PHP学院&quot;)</code>;<a id="more"></a></li>
+<li><code>createDocumentFragment()</code>，创建一个临时元素容器(也叫文档片段)<br> 语法格式：<code>var box = document.createDocumentFragment()</code><br> 该方法返回一个元素容器，用于临时保存新创建的元素，以提高DOM操作的性能。<br>以上是节点创建常用的方法，以下是添加创建的节点常用的方法</li>
+<li><code>appendChild(node)</code>，将node节点添加父元素的末尾</li>
+<li><code>insertBefore(newNode,refNode)</code>，在父元素的参考节点refNode之前插入newNode节点</li>
+<li><code>replaceChild(newNode,oldNode)</code>，将childNodes中的oldNode节点替换成newNode</li>
+<li><code>removeChild(node)</code>，从childNodes中删除node节点<br>代码示例演示每个方法的使用情况<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var oUl = document.getElementById(<span class="string">"oUl"</span>);</div><div class="line">//创建元素节点的方法</div><div class="line">var newLi1 = document.createElement(<span class="string">"li"</span>); </div><div class="line">//创建文本节点的方法</div><div class="line">var newLi1Txt = document.createTextNode(<span class="string">"我是新创建的节点li1中的文本"</span>);</div><div class="line">//把文本节点添加到li中(就是把小的逐级向大的内部添加)</div><div class="line">newLi1.appendChild(newLi1Txt);</div><div class="line">//把完整的新li节点添加到UL中</div><div class="line">oUl.appendChild(newLi1);</div><div class="line"></div><div class="line">//上面代码创建的有个问题，li中的文本缺少a标记，改进如下</div><div class="line">var newLi2 = document.createElement(<span class="string">"li"</span>); </div><div class="line">//创建A元素并设置其属性</div><div class="line">var newLi2A = document.createElement(<span class="string">"a"</span>); </div><div class="line">	newLi2A.href=<span class="string">"http://www.baidu.com"</span>;</div><div class="line">	newLi2A.target = <span class="string">"_blank"</span>;</div><div class="line">//创建文本节点</div><div class="line">var newLi2Txt = document.createTextNode(<span class="string">"连接词"</span>);</div><div class="line">//逐级向上级元素的内部添加</div><div class="line">newLi2A.appendChild(newLi2Txt);</div><div class="line">newLi2.appendChild(newLi2A); </div><div class="line">oUl.appendChild(newLi2);</div><div class="line"></div><div class="line"></div><div class="line">var fragment = document.createDocumentFragment();</div><div class="line">var li = null;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(var i=0;i&lt;1000;i++)&#123;</div><div class="line">	li = document.createElement(<span class="string">"li"</span>);</div><div class="line">	li.appendChild(document.createTextNode(<span class="string">"通过Fragmeng片段可以减少渲染次数提高性能"</span>));</div><div class="line">	 fragment.appendChild(li);</div><div class="line">	// oUl.appendChild(li); //理论上这一句比上一句效率低，但是实际情况是老浏览器基本是这样，新浏览器差不多。</div><div class="line">&#125;</div><div class="line">oUl.appendChild(fragment);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>提示：使用appendChild与createElement创建添加大量节点实战证明不是很高效。<br>    一般使用innerHTML效率可以有N倍的提升。下一节，节点的替换和删除。 下下一节innerHTML。</p>
+<h2 id="节点的替换与删除"><a href="#节点的替换与删除" class="headerlink" title="节点的替换与删除"></a>节点的替换与删除</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var oUl = document.getElementById(<span class="string">"oUl"</span>);</div><div class="line">//删除节点</div><div class="line">oUl.removeChild(oUl.childNodes[0].nextSibling);	//原有的LI1，就被删除了</div><div class="line"></div><div class="line">//替换节点</div><div class="line">//创建一个新节点</div><div class="line">var li = document.createElement(<span class="string">"li"</span>);</div><div class="line">var txt = document.createTextNode(<span class="string">"我替换了另外一个节点"</span>);</div><div class="line">li.appendChild(txt);</div><div class="line">//用新节点替换旧节点</div><div class="line">oUl.replaceChild(li,oUl.childNodes[2]);</div><div class="line"></div><div class="line">//在特定节点前插入新节点</div><div class="line">var h2 = document.createElement(<span class="string">"h2"</span>);</div><div class="line">var h2txt = document.createTextNode(<span class="string">"我是H2中的内容"</span>);</div><div class="line">	h2.appendChild(h2txt);</div><div class="line">var box = 	document.getElementById(<span class="string">"box"</span>);</div><div class="line">var h1t = 	document.getElementById(<span class="string">"h1t"</span>);</div><div class="line">box.insertBefore(h2,h1t);</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -431,15 +428,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/18/DOM节点02/" rel="next" title="元素节点，属性节点，文本节点及其类型判断和查找">
+                <i class="fa fa-chevron-left"></i> 元素节点，属性节点，文本节点及其类型判断和查找
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/18/DOM节点02/" rel="prev" title="元素节点，属性节点，文本节点及其类型判断和查找">
-                元素节点，属性节点，文本节点及其类型判断和查找 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -597,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#节点类型"><span class="nav-number">1.</span> <span class="nav-text">节点类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#访问节点"><span class="nav-number">1.1.</span> <span class="nav-text">访问节点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#节点的创建与添加"><span class="nav-number">1.</span> <span class="nav-text">节点的创建与添加</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#节点的替换与删除"><span class="nav-number">2.</span> <span class="nav-text">节点的替换与删除</span></a></li></ol></div>
             
 
           </div>
@@ -744,9 +741,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2017/09/18/DOM节点01/';
-          this.page.identifier = '2017/09/18/DOM节点01/';
-          this.page.title = 'DOM模型概念和JavaScript访问和查找节点';
+          this.page.url = 'http://yoursite.com/2017/09/19/DOM03/';
+          this.page.identifier = '2017/09/19/DOM03/';
+          this.page.title = '元素节点的创建，添加，替换与删除。';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
